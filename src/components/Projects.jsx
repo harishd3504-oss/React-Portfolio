@@ -10,7 +10,7 @@ const Projects = () => {
             image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=80&w=800",
             tags: ["PHP", "CRUD", "Database", "Web"],
             demoUrl: "https://github.com/harishd3504-oss",
-            codeUrl: "https://github.com/harishd3504-oss"
+            codeUrl: "https://github.com/harishd3504-oss/DBMS-.git"
         },
         {
             title: "AI projects",
@@ -18,7 +18,7 @@ const Projects = () => {
             image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
             tags: ["Python", "Machine Learning", "Chatbot", "Artificial Intelligence"],
             demoUrl: "https://github.com/harishd3504-oss",
-            codeUrl: "https://github.com/harishd3504-oss"
+            codeUrl: "https://github.com/harishd3504-oss/AI-projects.git"
         },
         {
             title: "AI ML Email Spam Detection",
@@ -26,7 +26,7 @@ const Projects = () => {
             image: "https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&q=80&w=800",
             tags: ["Python", "Data Science", "Machine Learning", "Text Classification", "Spam Detection"],
             demoUrl: "https://github.com/harishd3504-oss",
-            codeUrl: "https://github.com/harishd3504-oss"
+            codeUrl: "https://github.com/harishd3504-oss/MACHINE-LEARNING-EMAIL-SPAM-DETECTION.git"
         },
         {
             title: "Encryption and Decryption System",
@@ -34,7 +34,7 @@ const Projects = () => {
             image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
             tags: ["C", "Encryption", "Cybersecurity", "Decryption"],
             demoUrl: "https://github.com/harishd3504-oss",
-            codeUrl: "https://github.com/harishd3504-oss"
+            codeUrl: "https://github.com/harishd3504-oss/Encryption-And-Decryption.git"
         },
         {
             title: "Cybersecurity Portfolio Website",
@@ -42,7 +42,7 @@ const Projects = () => {
             image: "/project-portfolio.png",
             tags: ["React", "Framer Motion", "Tailwind CSS"],
             demoUrl: "https://github.com/harishd3504-oss",
-            codeUrl: "https://github.com/harishd3504-oss"
+            codeUrl: "https://github.com/harishd3504-oss/React-Portfolio.git"
         }
     ];
 

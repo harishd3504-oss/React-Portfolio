@@ -34,7 +34,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
     };
 
     return (
-        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'glass py-3 mx-4 mt-4' : 'bg-dark/80 backdrop-blur-md py-4'}`}>
+        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'glass py-3' : 'bg-dark/80 backdrop-blur-md py-4'}`}>
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}

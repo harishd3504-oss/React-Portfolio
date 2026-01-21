@@ -25,7 +25,7 @@ const Footer = () => {
                 <div className="flex gap-8">
                     <a href="#" className="text-xs font-bold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">Privacy</a>
                     <a href="#" className="text-xs font-bold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">Terms</a>
-                    <a href="#home" className="text-xs font-bold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">Back to top</a>
+                    <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-xs font-bold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest bg-transparent border-none cursor-pointer">Back to top</button>
                 </div>
             </div>
         </footer>

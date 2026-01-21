@@ -5,49 +5,78 @@ import { MessageSquare, ThumbsUp, ThumbsDown, Share2, PenTool } from 'lucide-rea
 const Blog = () => {
     const blogPosts = [
         {
+            id: 1,
             title: "Why I Love Building AI Projects",
             content: "Working on AI-based systems like sign language recognition has taught me how impactful technology can be when applied to accessibility. Combining deep learning with real-world problems is my favorite way to innovate.",
-            likes: 42,
-            dislikes: 2
+            likes: 0,
+            dislikes: 0,
+            date: "Jan 2026"
         },
         {
+            id: 2,
             title: "My Thoughts on Design & Aesthetics",
             content: "I believe design should be a balance between functionality and emotion. Dark themes with minimalist layouts always inspire me to create something that feels personal and futuristic.",
-            likes: 38,
-            dislikes: 0
+            likes: 0,
+            dislikes: 0,
+            date: "Dec 2025"
         },
         {
+            id: 3,
             title: "Balancing Tech and Creativity",
             content: "As someone who codes and designs, I've realized creativity isn't limited to art — it also lives in algorithms. Each project is like choreography for the mind, where logic meets aesthetic excellence.",
-            likes: 56,
-            dislikes: 1
+            likes: 0,
+            dislikes: 0,
+            date: "Nov 2025"
         },
         {
+            id: 4,
             title: "The Beauty of Simple Code",
             content: "Clean code isn't just about fewer lines — it's about clarity. Elegance in code feels like poetry to me — each function should have rhythm and purpose.",
-            likes: 49,
-            dislikes: 3
+            likes: 0,
+            dislikes: 0,
+            date: "Sep 2025"
         }
     ];
 
     const BlogCard = ({ post }) => {
-        const [likes, setLikes] = useState(post.likes);
-        const [dislikes, setDislikes] = useState(post.dislikes);
-        const [hasLiked, setHasLiked] = useState(false);
-        const [hasDisliked, setHasDisliked] = useState(false);
+        // Initialize state from local storage securely
+        const getStorageKey = (key) => `blog_${post.id}_${key}`;
+
+        const [likes, setLikes] = useState(() => {
+            const saved = localStorage.getItem(getStorageKey('likes'));
+            return saved ? parseInt(saved, 10) : post.likes;
+        });
+
+        const [dislikes, setDislikes] = useState(() => {
+            const saved = localStorage.getItem(getStorageKey('dislikes'));
+            return saved ? parseInt(saved, 10) : post.dislikes;
+        });
+
+        const [hasLiked, setHasLiked] = useState(() => {
+            return localStorage.getItem(getStorageKey('hasLiked')) === 'true';
+        });
+
+        const [hasDisliked, setHasDisliked] = useState(() => {
+            return localStorage.getItem(getStorageKey('hasDisliked')) === 'true';
+        });
+
+        // Persist state changes
+        React.useEffect(() => {
+            localStorage.setItem(getStorageKey('likes'), likes);
+            localStorage.setItem(getStorageKey('dislikes'), dislikes);
+            localStorage.setItem(getStorageKey('hasLiked'), hasLiked);
+            localStorage.setItem(getStorageKey('hasDisliked'), hasDisliked);
+        }, [likes, dislikes, hasLiked, hasDisliked, post.id]);
 
         const handleLike = () => {
             if (hasLiked) {
-                // Remove like
-                setLikes(likes - 1);
+                setLikes(prev => prev - 1);
                 setHasLiked(false);
             } else {
-                // Add like
-                setLikes(likes + 1);
+                setLikes(prev => prev + 1);
                 setHasLiked(true);
-                // If disliked, remove dislike
                 if (hasDisliked) {
-                    setDislikes(dislikes - 1);
+                    setDislikes(prev => prev - 1);
                     setHasDisliked(false);
                 }
             }
@@ -55,16 +84,13 @@ const Blog = () => {
 
         const handleDislike = () => {
             if (hasDisliked) {
-                // Remove dislike
-                setDislikes(dislikes - 1);
+                setDislikes(prev => prev - 1);
                 setHasDisliked(false);
             } else {
-                // Add dislike
-                setDislikes(dislikes + 1);
+                setDislikes(prev => prev + 1);
                 setHasDisliked(true);
-                // If liked, remove like
                 if (hasLiked) {
-                    setLikes(likes - 1);
+                    setLikes(prev => prev - 1);
                     setHasLiked(false);
                 }
             }
@@ -86,7 +112,7 @@ const Blog = () => {
                 <div className="space-y-4">
                     <div className="flex items-center justify-between">
                         <span className="text-xs font-bold text-cyan-500 uppercase tracking-widest px-3 py-1 glass bg-cyan-900/10">Reflection</span>
-                        <span className="text-xs text-gray-500 font-medium">Jan 2026</span>
+                        <span className="text-xs text-gray-500 font-medium">{post.date}</span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-100 leading-tight group-hover:text-cyan-400 transition-colors">
                         {post.title}
@@ -147,8 +173,8 @@ const Blog = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {blogPosts.map((post, idx) => (
-                        <BlogCard key={idx} post={post} />
+                    {blogPosts.map((post) => (
+                        <BlogCard key={post.id} post={post} />
                     ))}
                 </div>
             </div>

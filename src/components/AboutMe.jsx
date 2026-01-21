@@ -26,7 +26,7 @@ const AboutMe = () => {
                         <h3 className="text-2xl font-bold text-gray-100">The Journey of a Developer 🚀</h3>
                         <div className="space-y-4 text-gray-400 leading-relaxed">
                             <p>
-                                I am <span className="text-cyan-400 font-bold">Harish D</span>, a student at Sri Sairam Engineering College with a deep fascination for the digital world. My journey started with a curiosity about how things work behind the scenes, which naturally led me to the world of <span className="text-white">Ethical Hacking</span> and <span className="text-white">Fullstack Development</span>.
+                                I am <span className="text-cyan-400 font-bold">Harish D</span>, a student at Sri Sairam Engineering College with a deep fascination for the digital world. My journey started with a curiosity about how things work behind the scenes, which naturally led me to the world of <span className="text-white">Cyber Security</span> and <span className="text-white">Fullstack Development</span>.
                             </p>
                             <p>
                                 I thrive at the intersection of security and creation. While I enjoy building robust applications from scratch, I also find immense satisfaction in understanding system vulnerabilities to make the digital space safer. My focus is on leveraging <span className="text-cyan-500">AI tools</span> to enhance developmental efficiency and create innovative solutions.
@@ -60,8 +60,8 @@ const AboutMe = () => {
                         ))}
                     </div>
                 </div>
-            </div>
-        </section>
+            </div >
+        </section >
     );
 };
 

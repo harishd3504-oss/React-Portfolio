@@ -70,7 +70,7 @@ const Hero = () => {
                             HARISH <span className="neon-text">D</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-400 font-medium">
-                            Ethical Hacking Enthusiast | Aspiring Fullstack Developer
+                            Cyber Security Enthusiast | Aspiring Fullstack Developer
                         </p>
                     </div>
 
@@ -140,16 +140,16 @@ const Hero = () => {
                         </div>
                     </div>
                 </motion.div>
-            </div>
+            </div >
 
             {/* Floating Icons for vibe */}
-            <motion.div
+            < motion.div
                 animate={{ y: [0, -20, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
                 className="absolute bottom-10 left-10 text-cyan-500/20 hidden lg:block"
             >
                 <Terminal size={100} />
-            </motion.div>
+            </motion.div >
             <motion.div
                 animate={{ y: [0, 20, 0] }}
                 transition={{ duration: 5, repeat: Infinity }}
@@ -157,7 +157,7 @@ const Hero = () => {
             >
                 <Code2 size={120} />
             </motion.div>
-        </section>
+        </section >
     );
 };
 

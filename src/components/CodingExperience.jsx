@@ -66,7 +66,8 @@ const CodingExperience = () => {
                             </div>
                             <div>
                                 <h3 className="text-2xl font-bold">HARISH D</h3>
-                                <p className="text-gray-400">342405017</p>
+                                <p className="text-gray-400">SEC24SC011</p>
+                                <p className="text-gray-400">2403412514921014</p>
                                 <p className="text-sm text-gray-500">CSC</p>
                                 <p className="text-sm text-gray-500">Sairam Engineering College, Chennai</p>
                                 <p className="text-sm text-gray-500">(Second Year) 2028</p>
