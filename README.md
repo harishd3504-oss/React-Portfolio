@@ -1,2 +1,13 @@
-# React-Portfolio
-A responsive portfolio built with React that highlights my projects, technical skills, and coding experience for internships and entry-level roles.
+# 🚀 React Portfolio
+
+A modern and responsive personal portfolio website built using React.  
+It showcases my projects, skills, and development experience and is deployed on Vercel 🌐.
+
+## 🛠️ Tech Stack
+- ⚛️ React
+- 🌐 HTML
+- 🎨 CSS
+- 🧠 JavaScript
+
+## 🚀 Deployment
+- Deployed using Vercel ☁️
